@@ -1,0 +1,160 @@
+@import "./reset.css";
+@import "./style.css";
+@import "./mobile.css";
+@import "./tablet.css";
+@import "./pc.css";
+
+html {
+  width: 100%;
+}
+
+html.dark {
+  background-color: black;
+  color: white;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+}
+
+:root {
+  --font-h1: 54px;
+  --font-h2: 36px;
+  --font-h3: 26px;
+  --font-h4: 20px;
+  --font-p: 20px;
+
+  /* weight */
+
+  --weight-extrabold: 800;
+  --weight-bold: 600;
+  --weight-normal: 500;
+  --weight-light: 400;
+
+  /* color */
+
+  --color-black: #000000;
+  --color-light-black: #181818;
+  --color-back-light-grey: #f4f4f4;
+  --color-back-grey: #e2e2e2;
+  --color-letter-grey: #646464;
+  --color-light-grey: #bbbbbb;
+  /* #181818 <> 색 */
+  --color-white: #ffffff;
+  --color-skyblue: #00a1cd;
+  --color-midnight-black: #000000;
+  --color-coral-blue: #698ac4;
+  --color-rose-pink: #ce9da5;
+}
+
+h1 {
+  font-size: var(--font-h1);
+  font-weight: var(--weight-extrabold);
+}
+h2 {
+  font-size: var(--font-h2);
+  font-weight: var(--weight-extrabold);
+}
+h3 {
+  font-size: var(--font-h3);
+  font-weight: var(--weight-bold);
+}
+
+p {
+  font-size: var(--font-p);
+  font-weight: var(--weight-normal);
+}
+
+.hidden {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+#wrap {
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+}
+
+#header_wrap {
+  max-width: 1920px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: white;
+  z-index: 10000;
+}
+
+#contents_wrap {
+  width: 100%;
+  height: auto;
+}
+
+#section_intro_wrap {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  margin-top: 100px;
+}
+
+#section_text_wrap {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-back-light-grey);
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#section_color_wrap {
+  width: 100%;
+  height: auto;
+  /* 높이 수정 */
+  display: flex;
+  flex-direction: column;
+}
+
+#article_specifications {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-back-grey);
+  padding: 5% 10% 8% 10%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+#article_camera {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+#footer_wrap {
+  width: 100%;
+  height: auto;
+  background-color: white;
+
+  padding: 0 6% 2% 6%;
+  box-sizing: border-box;
+}
